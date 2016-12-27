@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+root 'welcome#index'  
 resources :foods
 get 'foods' => 'foods#index', as: :foods_index
 delete 'foods/:id' => 'foods#destroy', as: :delete  
