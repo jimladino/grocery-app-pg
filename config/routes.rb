@@ -1,8 +1,13 @@
 Rails.application.routes.draw do
 root 'welcome#index'  
-resources :foods
+resources :foods, :meals
 get 'foods' => 'foods#index', as: :foods_index
-delete 'foods/:id' => 'foods#destroy', as: :delete  
+delete 'foods/:id' => 'foods#destroy', as: :deletef
+post 'foods/:id' => 'foods#destroy'
+get 'meals' => 'meals#index', as: :meals_index
+delete 'meals/:id' => 'meals#destroy', as: :deletem
+post 'meals/:id' => 'foods#destroy'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

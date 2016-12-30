@@ -22,7 +22,7 @@
 		<td><%= food.food_name %></td>
 		<td><%=number_to_currency(food.cost) %></td>
 		<td><%=food.unit_qty %></td>
-		<td><%= link_to "Edit", edit_food_path(food) %>  <%= link_to "Delete", food, method: :delete, data: {confirm: "Are you sure?" } %></td>
+		<td><%= link_to "Edit", edit_food_path(food) %>  <%= link_to "Delete", food, method: :deletef, data: {confirm: "Are you sure?" } %></td>
 	</tr>
   
 <% end %>

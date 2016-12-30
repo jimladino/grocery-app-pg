@@ -1,0 +1,30 @@
+<div class="header">
+<%= image_tag ("menu.jpg") %>
+ <div class="container">
+
+ </div>
+</div>
+
+<div class="form">
+ <div class="container">
+ 
+<%= form_for(@meals) do |f| %>
+<p>
+<%=  f.label(:meal_name, "Meal Name") %><br>
+<%= f.text_field(:meal_name) %>
+</p>
+
+<p>
+ <%=  f.label(:category, "Category") %><br>
+<%= f.text_field (:category) %>
+</p>
+<p>
+<%=  f.label(:prep_time, "Prep Time") %><br>
+<%= f.text_field(:prep_time) %>
+</p>
+<p>
+ <%= f.submit "Save Changes" %>
+</p>
+ <% end %>  
+  </div>
+</div>
