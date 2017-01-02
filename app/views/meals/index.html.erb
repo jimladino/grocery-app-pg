@@ -2,8 +2,8 @@
 <center><%= image_tag ("menu.jpg") %></center>
  <div class="container">
    
-   <center><h1>Food List</h>
-   <h2><%= link_to "Add New Meal Item", 'meals/new' %>    <%= link_to "Main Menu", '/' %></h2></center>
+   <center><h1>Meal List</h>
+   <h2><%= link_to "Add New Meal Item", new_meal_path() %>    <%= link_to "Main Menu", '/' %></h2></center>
  </div>
 </div>
 
@@ -24,7 +24,7 @@
 		<td><%=m.meal_name %></td>
 		<td><%=m.category %></td>
 		<td><%=m.prep_time %></td>
-		<td><%= link_to "Edit", edit_meal_path(meals) %>  <%= link_to "Delete", meals, method: :deletem, data: {confirm: "Are you sure?" } %></td>
+		<td><%= link_to "Edit", edit_meal_path(m) %>  <%= link_to "Delete", m, method: :deletem, data: {confirm: "Are you sure?" } %></td>
 	</tr>
   
 <% end %>

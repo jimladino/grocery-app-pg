@@ -8,7 +8,11 @@
 <div class="form">
  <div class="container">
  
-<%= form_for(@meals) do |f| %>
+<%= form_for(@meal) do |f| %>
+<p>
+ <%= f.label(:image, "Image") %><br>
+ <%= f.text_field(:image) %>
+</p>
 <p>
 <%=  f.label(:meal_name, "Meal Name") %><br>
 <%= f.text_field(:meal_name) %>

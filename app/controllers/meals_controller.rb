@@ -6,7 +6,7 @@ class MealsController < ApplicationController
   @meal = Meals.new
   end
   def create
-  @meal = Meals.new(food_params)
+  @meal = Meals.new(meal_params)
     if @meal.save
     redirect_to '/meals'
     else
