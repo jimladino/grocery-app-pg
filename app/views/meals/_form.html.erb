@@ -17,10 +17,13 @@
 <%=  f.label(:meal_name, "Meal Name") %><br>
 <%= f.text_field(:meal_name) %>
 </p>
-
 <p>
  <%=  f.label(:category, "Category") %><br>
-<%= f.text_field (:category) %>
+<%= f.text_field(:category) %>
+</p>
+<p>
+ <%= f.label(:servings, "Number of Servings") %><br>
+ <%= f.number_field :servings %>
 </p>
 <p>
 <%=  f.label(:prep_time, "Prep Time") %><br>
