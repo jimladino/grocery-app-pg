@@ -21,7 +21,7 @@
  	</tr>
   <% @meals.each do |m| %>
   	<tr>
-		<td><%= image_tag(m.image) %></td>
+		<td><%= image_tag(m.image, size: "75x50") %></td>
 		<td><%=m.meal_name %></td>
 		<td><%=m.category %></td>
 		<td><%=m.servings %></td>
