@@ -47,3 +47,5 @@ group :development do
   gem 'spring'
 end
 
+# Use seed_dump gem
+gem 'seed_dump'
