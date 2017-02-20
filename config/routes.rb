@@ -5,7 +5,7 @@ delete 'foods/:id' => 'foods#destroy', as: :deletef
 post 'foods/:id' => 'foods#destroy'
 get 'meals' => 'meals#index', as: :meals_index
 delete 'meals/:id' => 'meals#destroy', as: :deletem
-post 'meals/:id' => 'foods#destroy'
+post 'meals/:id' => 'meals#destroy'
 resources :foods, :meals
 
   # The priority is based upon order of creation: first created -> highest priority.
