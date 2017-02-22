@@ -12,6 +12,7 @@
 
  <table border = 1>
  	<tr>
+ 		<td><h3>ID</h3></td>
  		<td><h3>Name</h3></td>
  		<td><h3>Cost</h3></td>
  		<td><h3>Unit QTY</h3></td>
@@ -19,6 +20,7 @@
  	</tr>
   <% @foods.each do |food| %>
   	<tr>
+		<td><%= food.id %></td>
 		<td><%= food.food_name %></td>
 		<td><%=number_to_currency(food.cost) %></td>
 		<td><%=food.unit_qty %></td>

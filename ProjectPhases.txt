@@ -1,7 +1,7 @@
 Phases Map
 
-Modify Foods Table to include record ID
-Modify Meals Table to include record ID
+Modify Foods Table to include record ID - Done
+Modify Meals Table to include record ID - Done
 Add sufficient data to Foods and Meals Tables to use to make a menu plan
 Establish "Many to Many" relationship
 Create relationship table of foods to meals
@@ -9,8 +9,13 @@ Create Meal Planner Form
   Day of the Week (one for each week day)
   Breakfast, Lunch, Dinner
   Meal (drop-down list)
+  Submit button - generates Meal Plan View for Printing
 Create Weekly Meal Plan View
   Day of the Week
   Meal
-  Links to recipie & change meal choice
-  Link on page to print grocery list
+  Button on page to print grocery list (runs Query to generate Grocery List)
+  Link on page to modify meal plan
+Create Grocery List (first Version)
+  Use Query to generate a temporary table of food items to purchase
+  Add ability to make direct modifications to the list (delete or add items)
+  Add print Button to print list for shopping use
