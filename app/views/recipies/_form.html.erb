@@ -1,0 +1,21 @@
+<div class="header">
+<%= image_tag ("food.jpg") %>
+ <div class="container">
+
+ </div>
+</div>
+
+<div class="form">
+ <div class="container">
+ 
+<%= form_for(@recipie) do |r| %>
+<p>
+<%=  r.label(:meal_name, "Meal Name") %><br>
+<%= r.collection_select(:meal_name, Meals.all, :meal_name, :meal_name, :include_blank => "Please select") %>
+</p>
+<p>
+ <%= r.submit "Save Changes" %>
+</p>
+ <% end %>  
+  </div>
+</div>
