@@ -35,10 +35,11 @@ ActiveRecord::Schema.define(version: 20170307031707) do
   end
 
   create_table "recipies", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
     t.integer  "meal_id"
     t.integer  "food_id"
+    t.string   "instructions"
     t.string   "meal_name"
   end
 
