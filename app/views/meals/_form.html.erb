@@ -26,6 +26,10 @@
  <%= f.number_field :servings %>
 </p>
 <p>
+<%=  f.label(:food_id, "Ingredients") %><br>
+<%= f.collection_select(:food_id, :food_id, foods.all, :id, :food_name, :include_blank => "Please select") %>
+</p>
+<p>
 <%=  f.label(:prep_time, "Prep Time") %><br>
 <%= f.text_field(:prep_time) %>
 </p>

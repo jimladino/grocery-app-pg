@@ -14,6 +14,10 @@
 <%= r.collection_select(:meal_name, Meals.all, :meal_name, :meal_name, :include_blank => "Please select") %>
 </p>
 <p>
+<%=  r.label(:food_id, "Ingredients") %><br>
+<%= r.collection_select(:food_id, Foods.all, :id, :food_name, {:include_blank => "Please select"}, {:multiple => true}) %>
+</p>
+<p>
  <%= r.submit "Save Changes" %>
 </p>
  <% end %>  

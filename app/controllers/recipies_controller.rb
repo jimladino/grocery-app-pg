@@ -40,6 +40,6 @@ class RecipiesController < ApplicationController
 
 private
   def recipie_params
-  params.require(:recipie).permit(:recipie, :image, :meal_id, :meal_name, :food_id, :instructions)
+  params.require(:recipie).permit(:recipie, :image, :meal_id, :meal_name, {:food_id => []}, :instructions)
   end
 end
