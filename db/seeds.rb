@@ -21,9 +21,3 @@ Meals.create!([
   {image: "http://www.fridaycakenight.com/wp-content/uploads/2015/12/Waffles1-745x1024.jpg", meal_name: "Waffles & Fruit", category: "Breakfast", prep_time: "15 Minutes", servings: "8"},
   {image: "https://theprimepursuit.files.wordpress.com/2012/08/dsc06446.jpg", meal_name: "Cold Cereal", category: "Breakfast", prep_time: "2 Minutes", servings: "1"}
 ])
-Recipie.create!([
-  {meal_id: 5, food_id: nil, meal_name: "Eggs & Toast"},
-  {meal_id: 1, food_id: nil, meal_name: "Pancakes"},
-  {meal_id: 4, food_id: nil, meal_name: "Peanut Butter & Jelly Sandwich"},
-  {meal_id: nil, food_id: nil, meal_name: "Eggs, Sausage, Hash Browns & Waffles"}
-])
