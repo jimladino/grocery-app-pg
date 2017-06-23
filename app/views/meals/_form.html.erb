@@ -30,6 +30,10 @@
 <%= f.text_field(:prep_time) %>
 </p>
 <p>
+<%=  f.label(:food_id, "Ingredients") %><br>
+<%= f.collection_select(:food_id, Foods.all, :id, :food_name, {:include_blank => false}, {:multiple => true})%>
+</p>
+<p>
  <%= f.submit "Save Changes" %>
 </p>
  <% end %>  
