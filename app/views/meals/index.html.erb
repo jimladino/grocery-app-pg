@@ -17,16 +17,21 @@
  		<td><h3>Meal Name</h3></td>
  		<td><h3>Category</h3></td>
  		<td><h3>Number of Servings</h3></td>
+ 		<td><h3>Ingredients</h3></td>
  		<td><h3>Prep Time</h3></td>
  		<td><h3>Actions</h3></td>
  	</tr>
-  <% @meals.each do |m| %>
+  <% @meals.each do |m, food| %>
   	<tr>
 		<td><%= m.id %></td>
 		<td><%= image_tag(m.image, size: "75x50") %></td>
 		<td><%=m.meal_name %></td>
 		<td><%=m.category %></td>
 		<td><%=m.servings %></td>
+		<td><% m.food_id.compact.each do |id| %>
+			<% fname = Foods.find(id) %>
+			<%=fname.food_name %><br>
+			<% end %></td>
 		<td><%=m.prep_time %></td>
 		<td><%= link_to "Edit", edit_meal_path(m) %>  <%= link_to "Delete", m, method: :deletem, data: {confirm: "Are you sure?" } %></td>
 	</tr>
