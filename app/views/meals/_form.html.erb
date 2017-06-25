@@ -31,7 +31,7 @@
 </p>
 <p>
 <%=  f.label(:food_id, "Ingredients") %><br>
-<p><i>Hold CTRL Key to select multiple items</i></p><br>
+<font size="6"><i>Hold CTRL Key to select multiple items</i></font></p><br>
 <%= f.collection_select(:food_id, Foods.all, :id, :food_name, {:include_blank => false}, {:multiple => true})%>
 </p>
 <p>
