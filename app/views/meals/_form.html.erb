@@ -29,9 +29,9 @@
 <%=  f.label(:prep_time, "Prep Time") %><br>
 <%= f.text_field(:prep_time) %>
 </p>
-<p>
-<%=  f.label(:food_id, "Ingredients") %><br>
-<font size="6"><i>Hold CTRL Key to select multiple items</i></font></p><br>
+
+<%=  f.label(:food_id, "Ingredients") %>
+<p style="font-size: 10px"><i>Hold CTRL Key to select multiple items</i></p>
 <%= f.collection_select(:food_id, Foods.all, :id, :food_name, {:include_blank => false}, {:multiple => true})%>
 </p>
 <p>
