@@ -6,10 +6,10 @@ post 'foods/:id' => 'foods#destroy'
 get 'meals' => 'meals#index', as: :meals_index
 delete 'meals/:id' => 'meals#destroy', as: :deletem
 post 'meals/:id' => 'meals#destroy'
-get 'recipies' => 'recipies#index', as: :recipies_index
-delete 'recipies/:id' => 'recipies#destroy', as: :deleter
-post 'recipies/:id' => 'recipies#destroy'
-resources :foods, :meals, :recipies
+get 'choosers' => 'choosers#index', as: :choosers_index
+delete 'choosers/:id' => 'choosers#destroy', as: :deleter
+post 'choosers/:id' => 'choosers#destroy'
+resources :foods, :meals, :choosers
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

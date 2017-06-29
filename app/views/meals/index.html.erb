@@ -12,7 +12,6 @@
 
  <table border = 1>
  	<tr>
- 		<td><h3>ID</h3></td>
  		<td><h3>Image</h3></td>
  		<td><h3>Meal Name</h3></td>
  		<td><h3>Category</h3></td>
@@ -21,9 +20,8 @@
  		<td><h3>Prep Time</h3></td>
  		<td><h3>Actions</h3></td>
  	</tr>
-  <% @meals.each do |m, food| %>
+  <% @meals.order(:meal_name).each do |m, food| %>
   	<tr>
-		<td><%= m.id %></td>
 		<td><%= image_tag(m.image, size: "75x50") %></td>
 		<td><%=m.meal_name %></td>
 		<td><%=m.category %></td>
