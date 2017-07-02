@@ -37,6 +37,10 @@ class ChoosersController < ApplicationController
   flash[:success] = "Chooser Item deleted."
   redirect_to(:action => 'index')
   end
+  def groceries
+    @choosers = Chooser.all      
+  end
+  
 
 private
   def chooser_params

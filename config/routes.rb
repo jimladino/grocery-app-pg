@@ -9,6 +9,7 @@ post 'meals/:id' => 'meals#destroy'
 get 'choosers' => 'choosers#index', as: :choosers_index
 delete 'choosers/:id' => 'choosers#destroy', as: :deleter
 post 'choosers/:id' => 'choosers#destroy'
+get 'choosers/groceries' => 'choosers#groceries'
 resources :foods, :meals, :choosers
 
   # The priority is based upon order of creation: first created -> highest priority.

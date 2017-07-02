@@ -3,7 +3,8 @@
  <div class="container">
    
    <center><h1>Weekly Meal Planner</h>
-   <h2><%= link_to "Plan a New Day", new_chooser_path() %>    <%= link_to "Main Menu", '/' %></h2></center>
+   <h2><%= link_to "Plan a New Day", new_chooser_path() %>    <%= link_to "Main Menu", '/' %><br><br>
+   <%= link_to "View/Print the Grocery List", choosers_groceries_path() %></h2></center>
  </div>
 </div>
 
@@ -31,6 +32,7 @@
 	</tr>
   
 <% end %>
+
 		</center>
  </div>
 </div>
