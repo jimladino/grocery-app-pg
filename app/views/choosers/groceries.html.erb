@@ -27,12 +27,13 @@
   <% intarray = mealselect.food_id %>
   <% garray = garray + intarray %>
   <% end %>
+  <% garray = garray.uniq %>
   <% garray.compact.each do |f| %>
   <% gfind = Foods.find(f) %>
   	<tr>
 		<td><b><input type = "checkbox" checked class = "item_checked"></b></td>
 		<td><%= gfind.food_name %></td>
-		<td><%= gfind.cost %></td>
+		<td><%= number_to_currency(gfind.cost) %></td>
 	</tr>
   
 <% end %>
