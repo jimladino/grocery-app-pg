@@ -1,3 +1,6 @@
+<style>
+ .inline
+</style>
 <div class="header">
 <center><%= image_tag ("food.jpg") %></center>
  <div class="container">
@@ -24,8 +27,10 @@
 		<td><%=food.unit_qty %></td>
 		<td><%= link_to "Edit", edit_food_path(food) %>  <%= link_to "Delete", food, method: :deletef, data: {confirm: "Are you sure?" } %></td>
 	</tr>
-  
 <% end %>
+ </table>
+ <p><b>Total Price of Checked Items: $
+ </b></p>
 		</center>
  </div>
 </div>
