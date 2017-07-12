@@ -53,8 +53,9 @@
 	
  <p><b class = "inline">Approximate Grocery Total: $
     <span class = "inline" id = "item_total"></span></b><br>
-    <input class = "inline" id = "recalc" type = "button" value = "Recalculate Cost"></p>
-    <input class = "inline" id = "repost" type = "button" value = "Repost List"></p>
+    <input class = "inline" id = "recalc" type = "button" value = "Recalculate Cost"><br>
+    <input class = "inline" id = "repost" type = "button" value = "Repost List"><br>
+    <input class = "inline" id = "print_list" type = "button" value = "Print List"></p>
 		</center>
  </div>
 </div>
@@ -88,9 +89,13 @@
   addPrices();
   hideLines();
  }
+ function printButton() {
+  window.print();
+ }
  
  $(document).ready(addPrices);
  $('#recalc').click(addPrices);
  $('#repost').click(doMultiple);
+ $('#print_list').click(printButton);
 </script>
 </body>
