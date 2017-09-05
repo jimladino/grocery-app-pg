@@ -30,10 +30,18 @@
 <%= f.text_field(:prep_time) %>
 </p>
 
-<%=  f.label(:food_id, "Ingredients") %>
-<p style="font-size: 10px"><i>Hold CTRL Key to select multiple items</i></p>
-<%= f.collection_select(:food_id, Foods.all, :id, :food_name, {:include_blank => false}, {:multiple => true})%>
-</p>
+<table>
+<tr>
+ <td>
+ <%=  f.label(:food_id, "Ingredients") %></td>
+</tr>
+<tr>
+ <td><p style="font-size: 15px">
+ <%= f.collection_check_boxes(:food_id, Foods.all, :id, :food_name, {:include_blank => false}, {:multiple => true}) do |b| %> 
+ <%= b.label(":data-value" => b.value) { b.check_box + b.text } %><br>
+ <% end %></p></td>
+  </tr>
+</table>
 <p>
  <%= f.submit "Save Changes" %>
 </p>
