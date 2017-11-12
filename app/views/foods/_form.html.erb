@@ -15,7 +15,7 @@
 </p>
 
 <p>
- <%=  f.label(:cost, "Cost") %><br>
+<%=  f.label(:cost, "Cost") %><br>
 <%= f.number_field :cost, value: number_to_currency(f.object.cost.to_f, delimiter: '', unit: ''), step: :any %>
 </p>
 <p>
@@ -23,7 +23,7 @@
 <%= f.text_field(:unit_qty) %>
 </p>
 <p>
- <%= f.submit "Save Changes" %>
+ <%= f.submit "Save Changes" %>  <button type="submit" formaction="javascript:history.go(-1);">Cancel</button>
 </p>
  <% end %>  
   </div>

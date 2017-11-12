@@ -21,30 +21,45 @@
  	<tr>
  		<td><h3><center>Selected</center></h3></td>
  		<td><h3><center>Food Item</center></h3></td>
- 		<td><h3><center>Cost</center></h3></td>
- 	</tr>
+ 		<td><h3><center>Quantity</center></h3>
+ 		<td><h3><center>Unit Cost</center></h3></td>
+ 		<td><h3><center>Total Item Cost</center></h3>
  	<% marray = [] %>
   <% @choosers.each do |c, meal| %>
   <% farray = [c.breakfast, c.lunch, c.supper] %>
   <% marray = marray + farray %>
   <% end %>
   <% garray = [] %>
-  <% iget = marray.each do |m| %>
+  <% marray.each do |m| %>
   <% mealselect = Meals.find(m) %>
   <% intarray = mealselect.food_id %>
   <% garray = garray + intarray %>
   <% end %>
-  <% totalCost = 0 %>
-  <% x = 0 %>
-  <% garray = garray.uniq %>
+  <% #garray = garray.uniq %>
   <% garray = garray.compact %>
-  <% garray.each do |f| %>
-  <% gfind = Foods.find(f) %>
+  <% print garray %>
+  <% ghash = {} %>
+  <% for i in 0..garray.length-1 %>
+  <% if ghash[garray[i]] == nil
+      ghash[garray[i]] = 1
+     else
+      ghash[garray[i]] = 1 + ghash[garray[i]]
+     end
+    end
+  %>
+  <% print ghash.compact %>
+  <% #ghash = ghash.compact %>
+  <% totalCost = 0 %>
+  <% x = 0 %>    
+  <% ghash.each do |i, q| %>
+  <% gfind = Foods.find(i) %>
   <tr id="row_<%=x %>">
 		 <td><b><input type="checkbox" checked="checked" id="item_checked_<%=x %>"></b></td>
 		 <td><%= gfind.food_name %></td>
-		 <% fcost = gfind.cost.to_f %>
-		 <td id="cost_<%=x %>"><%= number_with_precision(gfind.cost, precision: 2) %></td>
+		 <td><%= q %></td>
+		 <% fcost = (gfind.cost.to_f * q) %>
+   <td><%= number_with_precision(gfind.cost, precision: 2) %></td>
+		 <td id="cost_<%=x %>"><%= number_with_precision(fcost, precision: 2) %></td>
 	 </tr>
 	 <% x = x + 1 %>
 	 <% totalCost = fcost + totalCost %>

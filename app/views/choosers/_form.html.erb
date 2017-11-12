@@ -26,7 +26,7 @@
 <%= c.collection_select(:supper, Meals.all, :id, :meal_name, :include_blank => "Please select") %>
 </p>
 <p>
- <%= c.submit "Save Changes" %>
+ <%= c.submit "Save Changes" %> <button type="submit" formaction="javascript:history.go(-1);">Cancel</button>
 </p>
  <% end %>  
   </div>
