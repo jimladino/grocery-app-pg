@@ -79,7 +79,7 @@ GEM
     nio4r (1.2.1)
     nokogiri (1.10.4)
       mini_portile2 (~> 2.4.0)
-    pg (1.1.4)
+    pg (0.18.4)
     rack (2.0.7)
     rack-test (0.6.3)
       rack (>= 1.0)
@@ -168,7 +168,7 @@ DEPENDENCIES
   coffee-rails (~> 4.1.0)
   jbuilder (~> 2.0)
   jquery-rails
-  pg (~> 1.1.4)
+  pg (~> 0.18.0)
   rails (= 5.0)
   rails_12factor
   sass-rails (~> 5.0)
@@ -183,4 +183,4 @@ RUBY VERSION
    ruby 2.5.3p105
 
 BUNDLED WITH
-   1.17.1
+   1.17.3
